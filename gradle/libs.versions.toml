@@ -1,0 +1,59 @@
+[versions]
+spring-boot = "3.4.3"
+mysql = "9.2.0"
+lombok = "1.18.30"
+junit-jupiter = "5.9.3"
+commons-lang3 = "3.12.0"
+alibaba-dysmsapi-async = "3.0.3"
+alibaba-dysmsapi = "3.1.1"
+cola-components-bom = "5.0.0"
+mybatis-plus = "3.5.11"
+mybatis-flex = "1.10.9"
+hutool = "5.8.27"
+guava = "33.3.1-jre"
+slf4j = "2.0.17"
+hikari-cp = "6.3.0"
+
+[libraries]
+# Spring
+spring-boot-starter-base = { module = "org.springframework.boot:spring-boot-starter", version.ref = "spring-boot" }
+spring-boot-starter-web = { module = "org.springframework.boot:spring-boot-starter-web", version.ref = "spring-boot" }
+spring-boot-starter-data-jpa = { module = "org.springframework.boot:spring-boot-starter-data-jpa", version.ref = "spring-boot" }
+spring-boot-starter-test = { module = "org.springframework.boot:spring-boot-starter-test", version.ref = "spring-boot" }
+spring-tx = { module = "org.springframework:spring-tx", version = "5.3.23" }
+
+# Utils
+lombok = { module = "org.projectlombok:lombok", version.ref = "lombok" }
+commons-lang3 = { module = "org.apache.commons:commons-lang3", version.ref = "commons-lang3" }
+guava = { module = "com.google.guava:guava", version.ref = "guava" }
+hutool-all = { module = "cn.hutool:hutool-all", version.ref = "hutool" }
+slf4j-api = {module = "org.slf4j:slf4j-api", version.ref = "slf4j"}
+
+#Alibaba
+alibaba-dysmsapi-async = { module = "com.aliyun:alibabacloud-dysmsapi20170525", version.ref = "alibaba-dysmsapi-async" }
+alibaba-dysmsapi = { module = "com.aliyun:dysmsapi20170525", version.ref = "alibaba-dysmsapi" }
+
+#COLA
+cola-components-bom = { module = "com.alibaba.cola:cola-components-bom", version.ref = "cola-components-bom" }
+cola-component-dto = { module = "com.alibaba.cola:cola-component-dto", version.ref = "cola-components-bom" }
+cola-component-exception = { module = "com.alibaba.cola:cola-component-exception", version.ref = "cola-components-bom" }
+cola-component-catchlog-starter = { module = "com.alibaba.cola:cola-component-catchlog-starter", version.ref = "cola-components-bom" }
+cola-component-domain-starter = { module = "com.alibaba.cola:cola-component-domain-starter", version.ref = "cola-components-bom" }
+
+# Test
+junit-jupiter = { module = "org.junit.jupiter:junit-jupiter", version.ref = "junit-jupiter" }
+
+# Data
+mysql-connector = { module = "com.mysql:mysql-connector-j", version.ref = "mysql" }
+hikari-cp = { module = "com.zaxxer:HikariCP", version.ref = "hikari-cp" }
+mybatis-plus-boot-starter = { module = "com.baomidou:mybatis-plus-spring-boot3-starter", version.ref = "mybatis-plus" }
+mybatis-flex-boot-starter = { module = "com.mybatis-flex:mybatis-flex-spring-boot3-starter", version.ref = "mybatis-flex" }
+mybatis-flex-processor = { module = "com.mybatis-flex:mybatis-flex-processor", version.ref = "mybatis-flex" }
+
+
+[bundles]
+spring-web = ["spring-boot-starter-web", "spring-tx"]
+
+[plugins]
+spring-boot = { id = "org.springframework.boot", version.ref = "spring-boot" }
+dependency-management = { id = "io.spring.dependency-management", version = "1.1.7" }
